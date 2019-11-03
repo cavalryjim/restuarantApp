@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Restuarants
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card" *ngFor="let item of zamatoService.restaurants">
+      <img src="{{ item.restaurant.featured_image }}" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.restaurant.cuisines  }}</ion-card-subtitle>
+        <ion-card-title>{{ item.restaurant.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ item.restaurant.timings }}</p>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
